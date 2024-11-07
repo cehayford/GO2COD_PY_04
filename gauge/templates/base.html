@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BMI Calculator{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-amber-200 min-h-screen bg-cover bg-fixed">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="" class="text-xl font-bold text-gray-800 hover:text-gray-600 transition-colors">
+                    Body Mass Index Calculator
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white/90 backdrop-blur-sm mt-auto">
+        <div class="container mx-auto px-4 py-6">
+            <p class="text-center text-gray-600 text-sm">
+                © {% now "Y" %} Body Mass Index Calculator. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
